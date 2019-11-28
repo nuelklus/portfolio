@@ -18,10 +18,12 @@ from django.conf.urls.static import static
 
 from django.contrib import admin
 from django.urls import path,include
+from emmaapp.views import IndexView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('emmaapp.urls')),
+    path('', IndexView.as_view(), name = 'index'),
+    path('emmaapp/', include('emmaapp.urls',namespace='emmaapp') ),
 ]
 
 if settings.DEBUG:
