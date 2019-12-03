@@ -8,7 +8,9 @@ from django.urls import reverse_lazy,reverse
 
 # Create your views here.
 
-class IndexView(TemplateView):
+class IndexView(ListView):
+    context_object_name = 'docz'
+    model = PDF
     template_name = "emmaapp/index.html"
 
 class ContactFormView(FormView):
@@ -19,8 +21,12 @@ class ContactFormView(FormView):
     def form_valid(self, form):
         clean_form = form.cleaned_data
 
-        print(clean_form)
-        return super().form_valid(form)
+        subject = clean_form.get('subject', '')
+        message = clean_form.get('message', '')
+        from_email = clean_form.get('email' '')
+        print(from_email)
+        send_mail(subject, message, from_email, ['nuelklus@gmail.com'])
+        return super(ContactFormView, self).form_valid(form)
 
 class PDFCreateView(CreateView):
     model = PDF
@@ -28,10 +34,7 @@ class PDFCreateView(CreateView):
     success_url = reverse_lazy('emmaapp:sameindex')
     template_name = 'emmaapp/createpdf.html'
 
-class PDFListView(ListView):
-    context_object_name = 'docz'
-    model = PDF
-    template_name = 'emmaapp/pdflist.html'
+
     #     subject = clean_form.get('subject', '')
     #     message = clean_form.get('message', '')
     #     from_email = clean_form.get('email' '')

@@ -110,7 +110,7 @@
 
                         <!-- Button -->
                         <p class="text-center mb-0" >
-                            <a href=# target="_blank" class="btn btn-primary ">
+                            <a href="{% url 'emmaapp:createcontact' %}" target="_blank" class="btn btn-primary ">
                                 Contact Now
                             </a>
                         </p>
@@ -213,13 +213,10 @@
 
        	<div class="row button-section">
        		<div class="col-twelve">
-       			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
-                {% for PDF in docz %}
-                <a href={{PDF.mycv.url}} class="btn btn-primary ">
-                    Contact Now
-                </a>
+       			<a href="{% url 'emmaapp:createcontact' %}" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+                {% for row in docz %}
+       			<a href="{{row.mycv.url}}" title="Download CV" class="button button-primary">Download CV</a>
                 {% endfor %}
-                <!-- <a href="#" title="Download CV" >Download CV</a> -->
        		</div>
        	</div>
 

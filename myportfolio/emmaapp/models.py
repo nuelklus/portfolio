@@ -6,10 +6,10 @@ from django.urls import reverse
 # Create your models here.
 
 class Contact(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.CharField(max_length=200)
-    subject = models.CharField(max_length=200)
-    message = models.CharField(max_length=2000)
+    name = models.CharField(max_length=200, blank=True)
+    #email = models.CharField(max_length=200,{'class' : 'form-control'})
+    #subject = models.CharField(max_length=200,{'class' : 'form-control'})
+    #message = models.CharField(max_length=2000,{'class' : 'form-control'})
 
     # created_date = models.DateTimeField(default=timezone.now)
     # published_date = models.DateTimeField(blank=True, null=True)

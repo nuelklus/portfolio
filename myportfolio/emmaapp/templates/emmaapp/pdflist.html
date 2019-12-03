@@ -5,12 +5,12 @@
         <title></title>
     </head>
     <body>
-        {% for PDF in docz %}
-        <a href={{PDF.mycv.url}} class="btn btn-primary ">
+        {% for row in docz %}
+        <a href={{row.mycv.url}} class="btn btn-primary ">
             Contact Now
         </a>
         {% endfor %}
-        
+
 
 
 
