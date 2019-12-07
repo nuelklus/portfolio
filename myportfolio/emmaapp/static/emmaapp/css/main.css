@@ -54,6 +54,8 @@ html {
 	html {
 		font-size: 9.411764705882353px;
 	}
+
+
 }
 @media only screen and (max-width:768px) {
 	html {
@@ -64,6 +66,21 @@ html {
 	html {
 		font-size: 9.411764705882353px;
 	}
+
+        .bg-cover{
+            background-image: url('/static/emmaapp/img/one1.jpg') !important;
+            background-size:  contain !important;
+            background-repeat: no-repeat !important;
+            background-position: initial !important;
+        }
+
+        .banner-content{
+            padding: 90px 0px !important;
+        }
+
+        .intro-bg-color{
+            background-color: black !important;
+        }
 }
 
 html, body {

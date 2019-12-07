@@ -387,6 +387,7 @@ img {
     background-size: cover
 }
 
+
 .bg-cover,
 .bg-overlay,
 .bg-overlay:before {
@@ -761,4 +762,13 @@ img {
     font-weight: 700;
     margin: 30px 0px 20px;
     font-size: 22px;
+}
+
+
+/* navigation bar bottom style */
+.navbar-light {
+    /* color: #212529; */
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
