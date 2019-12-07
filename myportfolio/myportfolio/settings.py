@@ -25,7 +25,7 @@ SECRET_KEY = 'itm#*9l(y^gjmn%p_h4&$%y(1-uu_90ra1@&p0w-fb%8+lpy1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['nuelklus.pythonanywhere.com']
 
 
 # Application definition
